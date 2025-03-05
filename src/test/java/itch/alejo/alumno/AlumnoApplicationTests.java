@@ -1,4 +1,4 @@
-package com.alumnos.itch.alumno;
+package itch.alejo.alumno;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

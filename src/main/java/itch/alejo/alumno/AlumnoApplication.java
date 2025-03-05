@@ -1,4 +1,4 @@
-package com.alumnos.itch.alumno;
+package itch.alejo.alumno;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
