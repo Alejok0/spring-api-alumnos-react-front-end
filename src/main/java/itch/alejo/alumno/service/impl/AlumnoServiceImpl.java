@@ -64,6 +64,11 @@ public class AlumnoServiceImpl implements AlumnoService {
     }
     
     @Override
+    public void deleteAlumno(Long alumnoId) {
+        alumnoRepository.deleteById(alumnoId);
+    }
+    
+    @Override
     public AlumnoDto updateAlumno(Long alumnoId, AlumnoDto updateAlumno) {
     	Alumno alumno=alumnoRepository.findById(alumnoId).orElseThrow(
     			() -> new ResouserNotFoundException("el alumno no existe: "+ alumnoId));

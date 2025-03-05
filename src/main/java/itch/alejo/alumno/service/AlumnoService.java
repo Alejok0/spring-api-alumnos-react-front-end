@@ -14,4 +14,7 @@ public interface AlumnoService {
 	
 	//cuarto metodo del update
 	AlumnoDto updateAlumno(Long alumnoId, AlumnoDto updateAlumno);
+	
+	void deleteAlumno(Long alumnoId);
+
 }
