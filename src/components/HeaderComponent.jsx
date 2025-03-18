@@ -7,7 +7,7 @@ function HeaderComponent() {
   return (
     <header className="navbar navbar-expand-lg" style={{ backgroundColor: '#fbc02d' }}>
       <div className="container-fluid">
-        <a className="navbar-brand" href="#" style={{ color: '#333', fontWeight: 'bold' }}>Mi Encabezado</a>
+        <a className="navbar-brand" href="#" style={{ color: '#333', fontWeight: 'bold' }}>Restaurante</a>
         <button 
           className="navbar-toggler" 
           type="button" 
@@ -22,15 +22,18 @@ function HeaderComponent() {
               <a className="nav-link" onClick={() => navigate('/')} style={{ color: '#333', fontSize: '1.1rem', cursor: 'pointer' }}>Inicio</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" onClick={() => navigate('/alumnos')} style={{ color: '#333', fontSize: '1.1rem', cursor: 'pointer' }}>Alumnos</a>
+              <a className="nav-link" onClick={() => navigate('/menu')} style={{ color: '#333', fontSize: '1.1rem', cursor: 'pointer' }}>Menu</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" onClick={() => navigate('/formularioA')} style={{ color: '#333', fontSize: '1.1rem', cursor: 'pointer' }}>Formulario</a>
+              <a className="nav-link" onClick={() => navigate('/producto')} style={{ color: '#333', fontSize: '1.1rem', cursor: 'pointer' }}>Producto</a>
             </li>
           </ul>
           <button className="btn btn-dark" onClick={() => alert("Sesión cerrada")}>Cerrar sesión</button>
         </div>
       </div>
+
+      <title>Control restaurantero</title>
+       <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEWDgh9iQsF02C1EOdKL_cIMrfX-YKAAliXw&s" />
     </header>
   );
 }

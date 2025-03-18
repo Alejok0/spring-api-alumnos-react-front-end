@@ -2,12 +2,17 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Saludo from './PrimerEjem'
-import ListaAlumnoComponent from './components/ListAlumnoComponent';
+import Index from './components/PaginaPrincipal'
+
 import HeaderComponent from './components/HeaderComponent'
 import FooterComponent from './components/FooterComponent'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import AlumnoComponent from './components/AlumnoComponet'  // Asegúrate de renombrar el archivo a `AlumnoComponent.jsx`
+
+import MenuComponent from './components/MenuComponent'
+import ProductoComponent from './components/ProductoComponent'
+
+import ListaProductoComponent from './components/ListaProductoComponent'
+import ListaMenuComponent from './components/ListaMenuComponent';
 
 function App() {
   return (
@@ -16,16 +21,22 @@ function App() {
         <HeaderComponent />
         <Routes>
           {/* http://localhost:3000 */}
-          <Route path='/' element={<Saludo />} />
+          <Route path='/' element={<Index />} />
 
-          {/* http://localhost:3000/alumnos */}
-          <Route path='/alumnos' element={<ListaAlumnoComponent />} />
+          {/* http://localhost:3000/menu */}
+          <Route path='/menu' element={<ListaMenuComponent />} />
+          <Route path='/agregar-menu/' element={<MenuComponent />} />
+          <Route path='/editar-menu/:id' element={<MenuComponent />} />
 
-          {/* http://localhost:3000/formularioA */}
-          <Route path='/formularioA' element={<AlumnoComponent />} />
+          <Route path='/producto' element={<ListaProductoComponent />} />
+          <Route path='/agregar-producto/' element={<ProductoComponent />} />
+          <Route path='/editar-producto/:id' element={<ProductoComponent />} />
 
-          {/* http://localhost:3000/formularioA/:id */}
-          <Route path='/formularioA/:id' element={<AlumnoComponent />} />
+          {/* http://localhost:3000/formulario/:id 
+          <Route path='/formulario/:id' element={<AlumnoComponent />} />
+            */}
+    
+
         </Routes>
         <FooterComponent />
       </BrowserRouter>
